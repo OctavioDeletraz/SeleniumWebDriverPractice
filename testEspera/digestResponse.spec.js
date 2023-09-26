@@ -11,7 +11,7 @@ describe("autenticacion digest", () => {
     });
 
     afterEach(async () => {
-        //await driver.quit();
+        await global.driver.quit();
     });
 
     const form = {
