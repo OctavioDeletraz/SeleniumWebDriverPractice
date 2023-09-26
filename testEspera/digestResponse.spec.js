@@ -1,7 +1,6 @@
-const chai = require("chai");
 const digestAuth = require('../POM/digestAuto');
-const { By, until } = require('selenium-webdriver');
-const assert = chai.assert;
+const { By } = require('selenium-webdriver');
+const { assert } = require('chai');
 
 describe("autenticacion digest", () => {
 

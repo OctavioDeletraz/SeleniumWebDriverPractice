@@ -1,8 +1,8 @@
 //Deberia hacer validaciones en cuanto a navegación a URL de cada componente
 var webdriver = require('selenium-webdriver');
-const { By, Key } = require('selenium-webdriver');
-const chai = require("chai");
-const assert = chai.assert;
+const { By } = require('selenium-webdriver');
+const { assert } = require('chai');
+
 
 describe('Testeo correcta navegacion en la homePage para cada card', () => {
 

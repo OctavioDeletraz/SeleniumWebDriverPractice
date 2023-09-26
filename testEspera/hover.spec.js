@@ -1,7 +1,7 @@
-const chai = require("chai");
 let hover = require('../POM/hover');
 const { By, until } = require('selenium-webdriver');
-const assert = chai.assert;
+const { assert } = require('chai');
+
 
 describe("Testeo de hover", () => {
 

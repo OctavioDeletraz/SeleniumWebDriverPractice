@@ -1,7 +1,7 @@
-const chai = require("chai");
 const checkBox = require('../POM/checkBox');
 const { By } = require('selenium-webdriver');
-const assert = chai.assert;
+const { assert } = require('chai');
+
 
 describe("Validamos CheckBox", () => {
 

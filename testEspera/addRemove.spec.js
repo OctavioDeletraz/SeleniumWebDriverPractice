@@ -1,7 +1,7 @@
-const chai = require("chai");
 let addRemove = require('../POM/addRemove.js');
-const { By, until, Key } = require('selenium-webdriver');
-const assert = chai.assert;
+const { By } = require('selenium-webdriver');
+const { assert } = require('chai');
+
 
 describe("Test add/remove element", () => {
 

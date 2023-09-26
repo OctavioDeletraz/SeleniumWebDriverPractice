@@ -1,7 +1,6 @@
-const chai = require("chai");
 const windows = require('../POM/navigatingWindows');
 const { By, Key } = require('selenium-webdriver');
-const assert = chai.assert;
+const { assert } = require('chai');
 
 describe("Navegación dentro de pestañas", () => {
 
@@ -68,5 +67,21 @@ describe("Navegación dentro de pestañas", () => {
         await windows.maximize_window();
         let input = await global.driver.findElement(By.css('#searchform > input'));
         await input.sendKeys("100", Key.RETURN);
+    })
+
+    it("Se ventana emergente con mensaje", async () => {
+
+        // Abrir una nueva pestaña (esto puede variar según el navegador)
+        const button = await global.driver.findElement(By.id(selectors.newWindowMessageButtonId));
+        await button.click();
+        await button.click();
+
+
+        // Cambiar al contexto de la nueva pestaña
+        const ventanas = await driver.getAllWindowHandles();
+
+        assert.lengthOf(ventanas, 2, "Se esperaban 2 ventanas ya que es lo maximo que permite abrir a la vez")
+
+        await driver.switchTo().window(ventanas[1]); // Cambiar a la segunda pestaña
     })
 })

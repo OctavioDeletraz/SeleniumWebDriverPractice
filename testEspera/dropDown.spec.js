@@ -1,7 +1,6 @@
 const dropDown = require("../POM/dropDown");
-const chai = require("chai");
-const { By, Select, until, Key } = require('selenium-webdriver');
-const assert = chai.assert;
+const { By, Select } = require('selenium-webdriver');
+const { assert } = require('chai');
 
 
 describe("Testeo de dropdown con un select menu", () => {

@@ -1,6 +1,6 @@
-const chai = require("chai");
 const textBox = require('../POM/textBox');
-const assert = chai.assert;
+const { assert } = require('chai');
+
 
 describe("Evaluacion form con textBox", () => {
 

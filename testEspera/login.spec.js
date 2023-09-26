@@ -1,8 +1,6 @@
-const { assert } = require("chai");
 const login = require("../POM/login");
-const { By, logging, driver } = require("selenium-webdriver");
-
-
+const { By } = require("selenium-webdriver");
+const { assert } = require('chai');
 
 describe("Se valida el login de un usuario", () => {
 

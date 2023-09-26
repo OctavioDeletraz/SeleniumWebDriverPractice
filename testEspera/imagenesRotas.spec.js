@@ -1,6 +1,6 @@
-const chai = require("chai");
 const verificarImagen = require('../POM/verificarImagen');
-const assert = chai.assert;
+const { assert } = require('chai');
+
 
 describe("Test para buscar imagenes rotas", () => {
 

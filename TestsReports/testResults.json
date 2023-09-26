@@ -1,14 +1,14 @@
 {
   "stats": {
     "suites": 1,
-    "tests": 2,
-    "passes": 2,
+    "tests": 3,
+    "passes": 3,
     "pending": 0,
     "failures": 0,
-    "start": "2023-09-26T17:10:56.018Z",
-    "end": "2023-09-26T17:11:02.378Z",
-    "duration": 6360,
-    "testsRegistered": 2,
+    "start": "2023-09-26T17:20:30.911Z",
+    "end": "2023-09-26T17:20:39.118Z",
+    "duration": 8207,
+    "testsRegistered": 3,
     "passPercent": 100,
     "pendingPercent": 0,
     "other": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "daa7c123-a763-4930-b5f5-72b9c13f93d5",
+      "uuid": "f96e6bb3-513c-47a6-bfc4-b70374cc4076",
       "title": "",
       "fullFile": "C:\\Users\\octav\\OneDrive\\Escritorio\\seleniumAdvenced\\test\\windows.spec.js",
       "file": "\\test\\windows.spec.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "e8b11019-7c2c-4326-af79-8f46ff902bcc",
+          "uuid": "924e512f-6947-4bb8-b636-0ecfff2b878a",
           "title": "Navegación dentro de pestañas",
           "fullFile": "C:\\Users\\octav\\OneDrive\\Escritorio\\seleniumAdvenced\\test\\windows.spec.js",
           "file": "\\test\\windows.spec.js",
@@ -36,7 +36,7 @@
               "title": "\"before each\" hook in \"Navegación dentro de pestañas\"",
               "fullTitle": "Navegación dentro de pestañas \"before each\" hook in \"Navegación dentro de pestañas\"",
               "timedOut": false,
-              "duration": 595,
+              "duration": 592,
               "state": null,
               "speed": null,
               "pass": false,
@@ -45,8 +45,8 @@
               "context": null,
               "code": "await windows.get_driver(\"chrome\");\nawait windows.go_to_url(\"https://demoqa.com/browser-windows\")\nawait windows.maximize_window();",
               "err": {},
-              "uuid": "fbdc99e0-0663-422d-9751-68c584b1c7d6",
-              "parentUUID": "e8b11019-7c2c-4326-af79-8f46ff902bcc",
+              "uuid": "768237bd-bcc5-4f3a-bfe5-4654a2f82f9b",
+              "parentUUID": "924e512f-6947-4bb8-b636-0ecfff2b878a",
               "isHook": true,
               "skipped": false
             }
@@ -56,7 +56,7 @@
               "title": "\"after each\" hook in \"Navegación dentro de pestañas\"",
               "fullTitle": "Navegación dentro de pestañas \"after each\" hook in \"Navegación dentro de pestañas\"",
               "timedOut": false,
-              "duration": 24,
+              "duration": 21,
               "state": null,
               "speed": null,
               "pass": false,
@@ -65,8 +65,8 @@
               "context": null,
               "code": "await driver.quit();",
               "err": {},
-              "uuid": "003d19f4-017e-4ef5-b9ac-3ddfe6c7b7a1",
-              "parentUUID": "e8b11019-7c2c-4326-af79-8f46ff902bcc",
+              "uuid": "baab5691-c6ab-4a40-8056-aa6f0af38c0b",
+              "parentUUID": "924e512f-6947-4bb8-b636-0ecfff2b878a",
               "isHook": true,
               "skipped": false
             }
@@ -76,7 +76,7 @@
               "title": "Se abren dos pestañas y se navega a la primera abierta, se valida su URL",
               "fullTitle": "Navegación dentro de pestañas Se abren dos pestañas y se navega a la primera abierta, se valida su URL",
               "timedOut": false,
-              "duration": 1163,
+              "duration": 1181,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -85,8 +85,8 @@
               "context": null,
               "code": "// Abrir una nueva pestaña (esto puede variar según el navegador)\n        const button = await global.driver.findElement(By.id(selectors.newTabButtonId));\n        //const button = await global.driver.wait(until.elementLocated(By.css(selectors.newTabButtonId)), 2000);\n        await button.click();\n        await button.click();\n        // Cambiar al contexto de la nueva pestaña\n        const ventanas = await driver.getAllWindowHandles();\n        await driver.switchTo().window(ventanas[1]); // Cambiar a la segunda pestaña\n        // Navegar en la segunda pestaña\n        const header = await global.driver.findElement(By.id(selectors.headingId));\n        // Realizar acciones en la segunda pestaña (puede ser cualquier interacción)\n        assert.equal(await header.getText(), \"This is a sample page\")\n        // Cambiar de nuevo al contexto de la primera pestaña\n        await driver.switchTo().window(ventanas[2]); // Cambiar a la primera pestaña\n        // Realizar acciones en la primera pestaña (puede ser cualquier interacción)\n        // Cerrar la segunda pestaña (esto también puede variar según el navegador)\n        await global.driver.close();\n        await driver.switchTo().window(ventanas[1]);\n        await global.driver.close();",
               "err": {},
-              "uuid": "6646e93c-9212-41a2-8ea5-72a2f440116c",
-              "parentUUID": "e8b11019-7c2c-4326-af79-8f46ff902bcc",
+              "uuid": "6cf3fc19-fd4f-4159-b6b0-2b49b4183b2c",
+              "parentUUID": "924e512f-6947-4bb8-b636-0ecfff2b878a",
               "isHook": false,
               "skipped": false
             },
@@ -94,7 +94,7 @@
               "title": "Se abren dos ventanas y se navega a la primera abierta, se valida su URL",
               "fullTitle": "Navegación dentro de pestañas Se abren dos ventanas y se navega a la primera abierta, se valida su URL",
               "timedOut": false,
-              "duration": 3928,
+              "duration": 3939,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -103,21 +103,40 @@
               "context": null,
               "code": "// Abrir una nueva pestaña (esto puede variar según el navegador)\n        const button = await global.driver.findElement(By.id(selectors.newWindowButtonId));\n        await button.click();\n        await button.click();\n        // Cambiar al contexto de la nueva pestaña\n        const ventanas = await driver.getAllWindowHandles();\n        await driver.switchTo().window(ventanas[1]); // Cambiar a la segunda pestaña\n        // Realiza acciones en la segunda ventana\n        await driver.get('https://www.example2.com');\n        await windows.maximize_window();\n        let input = await global.driver.findElement(By.css('#searchform > input'));\n        await input.sendKeys(\"100\", Key.RETURN);",
               "err": {},
-              "uuid": "5cafff96-a5e1-405b-b9a6-7e224aea92c0",
-              "parentUUID": "e8b11019-7c2c-4326-af79-8f46ff902bcc",
+              "uuid": "3219e0d1-cfea-4320-9eb0-bff64f7d243a",
+              "parentUUID": "924e512f-6947-4bb8-b636-0ecfff2b878a",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Se ventana emergente con mensaje",
+              "fullTitle": "Navegación dentro de pestañas Se ventana emergente con mensaje",
+              "timedOut": false,
+              "duration": 1210,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Abrir una nueva pestaña (esto puede variar según el navegador)\n        const button = await global.driver.findElement(By.id(selectors.newWindowMessageButtonId));\n        await button.click();\n        await button.click();\n        // Cambiar al contexto de la nueva pestaña\n        const ventanas = await driver.getAllWindowHandles();\n        assert.lengthOf(ventanas, 2, \"Se esperaban 2 ventanas ya que es lo maximo que permite abrir a la vez\")\n        await driver.switchTo().window(ventanas[1]); // Cambiar a la segunda pestaña",
+              "err": {},
+              "uuid": "fc4f414b-017f-4084-9b1b-ffdcfddce398",
+              "parentUUID": "924e512f-6947-4bb8-b636-0ecfff2b878a",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "6646e93c-9212-41a2-8ea5-72a2f440116c",
-            "5cafff96-a5e1-405b-b9a6-7e224aea92c0"
+            "6cf3fc19-fd4f-4159-b6b0-2b49b4183b2c",
+            "3219e0d1-cfea-4320-9eb0-bff64f7d243a",
+            "fc4f414b-017f-4084-9b1b-ffdcfddce398"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 5091,
+          "duration": 6330,
           "root": false,
           "rootEmpty": false,
           "_timeout": 0

@@ -1,7 +1,7 @@
-const chai = require("chai");
 const contextMenu = require('../POM/contextMenu');
-const { By, until } = require('selenium-webdriver');
-const assert = chai.assert;
+const { By } = require('selenium-webdriver');
+const { assert } = require('chai');
+
 
 describe("Validamos contextMenu", () => {
 
